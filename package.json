@@ -4,8 +4,10 @@
   "description": "API Server",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js monitor",
     "start": "NODE_ENV=production node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run validate-package-json && npm run lint",
+    "validate-package-json": "./validate-package-json.js"
   },
   "pre-commit": [
     "validate-package-json",
