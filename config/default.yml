@@ -1,0 +1,23 @@
+port: 3000
+b2:
+  accountId: accountId
+  applicationKey: applicationKey
+  bucketId: bucketId
+  digest:
+    algorithm: sha1
+es:
+  apiVersion: '5.2'
+  hosts:
+   - localhost
+  port: 9200
+  protocol: http
+  user: user
+  password: password
+  log:
+    level: trace
+    path: './elasticsearch.log'
+    type: file
+  index: images
+upload:
+  maxFileSize: 209715200 # 200MB
+  tempDir: './tmp'
