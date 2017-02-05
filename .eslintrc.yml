@@ -1,0 +1,47 @@
+extends:
+ - eslint:recommended
+installedESLint: true
+parserOptions:
+ ecmaVersion: 6
+ sourceType: module
+env:
+ es6: true
+ node: true
+root: true
+rules:
+ # Require space before/after arrow function’s arrow.
+ arrow-spacing: error
+ # Require Brace Style.
+ brace-style: error
+ # Require `===` and `!==`.
+ eqeqeq: error
+ # Enforce consistent spacing between keys and values in object literal properties.
+ key-spacing: error
+ # Enforce consistent spacing before and after keywords.
+ keyword-spacing: error
+ # lines-around-comment: warn beforeBlockComment beforeLineComment allowBlockStart allowBlockEnd allowObjectStart allowObjectEnd allowArrayStart allowArrayEnd
+ # Require or disallow newlines around directives.
+ lines-around-directive:
+  - error
+  - before: never
+    after: always
+ # Disallow return before else.
+ no-else-return: error
+ # Disallow the use of `eval()`.
+ no-eval: error
+ # Disallow multiple empty lines.
+ no-multiple-empty-lines: error
+ # Require radix parameter.
+ radix: error
+ # Require or disallow semicolons instead of ASI.
+ semi: error
+ # sort-vars: warn
+ # Requires or disallows a whitespace (space or tab) beginning a comment.
+ spaced-comment: error
+ # Require or disallow space before blocks.
+ space-before-blocks: error
+ # Require or disallow a space before function parenthesis.
+ space-before-function-paren:
+  - error
+  - anonymous: always
+    named: never
