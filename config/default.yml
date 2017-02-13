@@ -18,6 +18,10 @@ es:
     path: './elasticsearch.log'
     type: file
   index: images
+logger:
+  level: debug
+  file:
+    path: './api.log'
 upload:
   maxFileSize: 209715200 # 200MB
   tempDir: './tmp'
