@@ -6,7 +6,7 @@ b2:
   digest:
     algorithm: sha1
 es:
-  apiVersion: '5.2'
+  apiVersion: '5.x'
   hosts:
    - localhost
   port: 9200
