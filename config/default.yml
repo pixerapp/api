@@ -18,6 +18,9 @@ es:
     path: './elasticsearch.log'
     type: file
   index: images
+fb:
+  appId: appId
+  appSecret: appSecret
 logger:
   level: debug
   file:
