@@ -5,8 +5,9 @@ b2:
   bucketId: bucketId
   digest:
     algorithm: sha1
-es:
-  apiVersion: '5.x'
+db:
+  type: 'elasticsearch'
+  apiVersion: '5.0'
   hosts:
    - localhost
   port: 9200
@@ -17,7 +18,7 @@ es:
     level: trace
     path: './elasticsearch.log'
     type: file
-  index: images
+  index: files
 fb:
   appId: appId
   appSecret: appSecret
@@ -27,4 +28,6 @@ logger:
     path: './api.log'
 upload:
   maxFileSize: 209715200 # 200MB
+  supportedMimeTypes:
+   - 'image/jpeg'
   tempDir: './tmp'
