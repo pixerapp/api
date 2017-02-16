@@ -73,8 +73,6 @@ function requestMiddleware(req, res, next) {
 function responseMiddleware(response, req, res, next) {
   const { status } = response;
 
-  console.log(response, status);
-
   res
     .status(status)
     .json(response);
