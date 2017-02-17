@@ -1,6 +1,21 @@
 {
+  "settings" : {
+    "index" : {
+      "number_of_shards": 3,
+      "number_of_replicas": 0
+    }
+  },
   "mappings": {
     "fb": {
+      "properties": {
+        "profileId": {
+          "type": "keyword",
+          "doc_values": false,
+          "index": false
+        }
+      }
+    },
+    "profile": {
       "properties": {
         "name": {
           "type": "text"
