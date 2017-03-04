@@ -28,6 +28,50 @@ logger:
     path: './api.log'
 upload:
   maxFileSize: 209715200 # 200MB
+  image:
+    metadata:
+      bufferFields:
+       - ExifVersion
+       - FileSource
+       - FlashpixVersion
+       - icc
+       - SceneType
+      exifFields:
+       - ApertureValue
+       - ColorSpace
+       - DateTimeDigitized
+       - DateTimeOriginal
+       - ExifVersion
+       - ExposureTime
+       - Flash
+       - FNumber
+       - FocalLength
+       - ISO
+       - ShutterSpeedValue
+      exifImageFields:
+       - Make
+       - Model
+       - Software
+       - ModifyDate
+      metaFields:
+       - channels
+       - density
+       - format
+       - hasProfile
+       - hasAlpha
+       - height
+       - orientation
+       - space
+       - width
+    thumbnail:
+      formats:
+       - jpeg
+       - webp
+      sizes:
+       - 90
+       - 180
+       - 270
+       - 960
   supportedMimeTypes:
    - 'image/jpeg'
   tempDir: './tmp'
