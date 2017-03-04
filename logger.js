@@ -71,10 +71,12 @@ function requestMiddleware(req, res, next) {
 }
 
 function responseMiddleware(response, req, res, next) {
-  const { status } = response;
+  if (response instanceof Error) {
+    return next(response);
+  }
 
   res
-    .status(status)
+    .status(response.status)
     .json(response);
 }
 
